@@ -45,34 +45,6 @@ pip install -e ".[dev]"
 pre-commit install
 ```
 
-## Качество кода
-
-- **ruff**: линтер и форматер, настройки в `pyproject.toml`.
-- **pre-commit**: перед каждым коммитом запускает ruff, ruff-format и базовые проверки
-  (пробелы, YAML/TOML, большие файлы, приватные ключи).
-
-```bash
-ruff check .          # линтинг
-ruff format .         # форматирование
-pre-commit run --all-files
-pytest
-```
-
-## Данные
-
-Планируемые открытые датасеты:
-[TrashNet](https://github.com/garythung/trashnet),
-[Garbage Classification (12 classes)](https://www.kaggle.com/datasets/mostafaabla/garbage-classification),
-[TACO](http://tacodataset.org/), для типов пластика —
-[WaDaBa](http://wadaba.pcz.pl/). Данные и веса моделей в git не хранятся.
-
-## Статус
-
-- [x] HW1: сетап репозитория, дизайн-документ
-- [ ] Бейзлайн-модель
-- [ ] Подклассификация пластика по типу
-- [ ] API и демо-интерфейс
-
 ## Планы на будущее
 
 - **Распознаватель для конвейеров сортировочных станций.** Детекция нескольких предметов

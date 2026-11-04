@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Tools
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data & models (храним вне git, позже — DVC)
+data/
+models/
+*.pt
+*.onnx
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

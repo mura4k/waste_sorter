@@ -3,7 +3,7 @@ name = "waste-sorter"
 version = "0.1.0"
 description = "ML-сервис для автоматической классификации бытовых отходов по фото"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = []
 
 [project.optional-dependencies]
@@ -18,7 +18,7 @@ where = ["src"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py39"
+target-version = "py311"
 src = ["src", "tests"]
 extend-exclude = ["data", "models", "notebooks/.ipynb_checkpoints"]
 
@@ -33,9 +33,6 @@ select = [
     "N",   # pep8-naming
     "SIM", # flake8-simplify
 ]
-
-[tool.ruff.lint.per-file-ignores]
-"tests/*" = ["S101"]
 
 [tool.ruff.format]
 quote-style = "double"

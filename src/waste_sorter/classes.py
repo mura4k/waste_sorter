@@ -1,9 +1,10 @@
-"""Целевые классы (фракции) и подсказки по утилизации."""
+"""Материалы и общие подсказки; приём определяется отдельным профилем оператора."""
 
-from enum import Enum
+from collections.abc import Mapping
+from enum import StrEnum
 
 
-class WasteClass(str, Enum):
+class WasteClass(StrEnum):
     PLASTIC = "plastic"
     PAPER = "paper"
     GLASS = "glass"
@@ -14,31 +15,45 @@ class WasteClass(str, Enum):
 
 
 DISPOSAL_HINTS: dict[WasteClass, str] = {
-    WasteClass.PLASTIC: "Сполосните и сомните, контейнер для пластика.",
-    WasteClass.PAPER: "Сухая бумага и картон, контейнер для макулатуры.",
-    WasteClass.GLASS: "Без крышек, контейнер для стекла.",
-    WasteClass.METAL: "Банки сполосните и сплющите, контейнер для металла.",
-    WasteClass.ORGANIC: "Пищевые отходы, контейнер для органики или компост.",
-    WasteClass.HAZARDOUS: "Батарейки, лампы, техника: специальный пункт приёма.",
-    WasteClass.OTHER: "Не перерабатывается, контейнер для смешанных отходов.",
+    WasteClass.PLASTIC: "Проверьте маркировку и условия приёма пластика у местного оператора.",
+    WasteClass.PAPER: "Проверьте состав, загрязнение и правила приёма бумаги у местного оператора.",
+    WasteClass.GLASS: "Проверьте вид изделия и правила приёма стекла у местного оператора.",
+    WasteClass.METAL: "Проверьте вид изделия и правила приёма металла у местного оператора.",
+    WasteClass.ORGANIC: "Уточните, есть ли местный сбор органики и какие отходы он принимает.",
+    WasteClass.HAZARDOUS: (
+        "Возможны опасные отходы: не используйте обычный контейнер, уточните специальный сбор."
+    ),
+    WasteClass.OTHER: "Материал вне основных категорий: уточните состав и местные правила приёма.",
 }
 
 
-class PlasticType(str, Enum):
-    """Тип пластика, определяется только для класса `WasteClass.PLASTIC`."""
+class PlasticType(StrEnum):
+    """Четыре кандидата; неизвестный полимер не получает выдуманный подтип."""
 
     PET = "pet"  # ♳ 1
     HDPE = "hdpe"  # ♴ 2
-    LDPE = "ldpe"  # ♶ 4
     PP = "pp"  # ♷ 5
     PS = "ps"  # ♸ 6
-    NON_RECYCLABLE = "non_recyclable"  # ♵ 3 (PVC), ♹ 7 (прочее, композиты)
 
 
-RECYCLABLE_PLASTICS: frozenset[PlasticType] = frozenset(
-    {PlasticType.PET, PlasticType.HDPE, PlasticType.LDPE, PlasticType.PP, PlasticType.PS}
-)
+class Acceptance(StrEnum):
+    """Приём предмета в контексте проверенного профиля, а не свойство полимера."""
+
+    ACCEPTED = "accepted"
+    REJECTED = "rejected"
+    UNKNOWN = "unknown"
 
 
-def is_recyclable(plastic_type: PlasticType) -> bool:
-    return plastic_type in RECYCLABLE_PLASTICS
+def acceptance_for(
+    plastic_type: PlasticType,
+    policy: Mapping[PlasticType, Acceptance] | None = None,
+) -> Acceptance:
+    """Применить профиль, выбранный после проверки условий для конкретного предмета.
+
+    Отсутствующая запись не означает отказ в приёме. Вызывающий код отвечает за
+    проверку оператора, версии правил, вида изделия и его состояния. Универсального
+    профиля по умолчанию нет.
+    """
+    if policy is None:
+        return Acceptance.UNKNOWN
+    return policy.get(plastic_type, Acceptance.UNKNOWN)

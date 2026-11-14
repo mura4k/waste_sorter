@@ -1,0 +1,31 @@
+image_id,source_label,observation,review_method,label_changed
+trashnet/cardboard/cardboard129.jpg,cardboard,"Крупный план печатной упаковки, несколько поверхностей",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/cardboard/cardboard137.jpg,cardboard,Небольшой фрагмент гофрокартона на светлом фоне,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/cardboard/cardboard162.jpg,cardboard,"Печатная упаковка крупным планом, предмет виден не полностью",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/cardboard/cardboard352.jpg,cardboard,Крупный план картона с печатью,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/cardboard/cardboard354.jpg,cardboard,Гладкая поверхность занимает почти весь кадр; мало информации о предмете,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/glass/glass126.jpg,glass,Частично видимая ёмкость с бумажной этикеткой,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/glass/glass156.jpg,glass,"Крупный план прозрачной банки, края предмета обрезаны",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/glass/glass164.jpg,glass,Коричневая бутылка с этикеткой,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/glass/glass293.jpg,glass,Прозрачная бутылка с этикеткой,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/glass/glass466.jpg,glass,Частично видимая прозрачная ёмкость,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/metal/metal117.jpg,metal,"Проволочная металлическая деталь, не типичная банка",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/metal/metal123.jpg,metal,Крупный план смятой печатной банки,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/metal/metal244.jpg,metal,Круглая крышка с отражающей поверхностью,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/metal/metal328.jpg,metal,"Смятый блестящий материал, точный состав по фото не подтверждён",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/metal/metal48.jpg,metal,Небольшая крышка на почти однородном фоне,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/paper/paper189.jpg,paper,"Печатная бумага крупным планом, предмет виден не полностью",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/paper/paper222.jpg,paper,Фрагмент бумажного конверта,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/paper/paper468.jpg,paper,"Обрывок бумаги, состав покрытия по фото не подтверждён",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/paper/paper516.jpg,paper,Лист в линейку,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/paper/paper75.jpg,paper,Цветные кусочки бумаги с пятнами,assistant_visual_screening_not_expert_ground_truth,False
+trashnet/plastic/plastic124.jpg,plastic,"Крупный план прозрачной бутылки с крышкой, маркировка не видна",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/plastic/plastic248.jpg,plastic,"Прозрачная формованная упаковка, полимер по фото не подтверждён",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/plastic/plastic349.jpg,plastic,"Прозрачная упаковка, полимер по фото не подтверждён",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/plastic/plastic81.jpg,plastic,"Смятая прозрачная ёмкость, полимер по фото не подтверждён",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/plastic/plastic88.jpg,plastic,"Бутылка с этикеткой, маркировка полимера не читается",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/trash/trash103.jpg,trash,"Смятый бумагообразный материал, загрязнение и покрытие не установлены",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/trash/trash23.jpg,trash,"Смятый светлый материал похож на бумагу, состав не подтверждён",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/trash/trash49.jpg,trash,"Смятый волокнистый материал, не обосновывает отдельный материал other",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/trash/trash6.jpg,trash,"Светлая смятая упаковка, материал неоднозначен",assistant_visual_screening_not_expert_ground_truth,False
+trashnet/trash/trash82.jpg,trash,"Печатная гибкая упаковка, возможен композит, состав не установлен",assistant_visual_screening_not_expert_ground_truth,False

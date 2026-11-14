@@ -1,0 +1,19 @@
+{
+  "version": "hw2-v1",
+  "trashnet": {
+    "cardboard": "paper",
+    "paper": "paper",
+    "plastic": "plastic",
+    "glass": "glass",
+    "metal": "metal",
+    "trash": null
+  },
+  "taco": {
+    "plastic": ["Other plastic bottle", "Clear plastic bottle", "Plastic bottle cap", "Disposable plastic cup", "Foam cup", "Other plastic cup", "Plastic lid", "Other plastic", "Plastic film", "Six pack rings", "Garbage bag", "Single-use carrier bag", "Polypropylene bag", "Spread tub", "Tupperware", "Disposable food container", "Foam food container", "Other plastic container", "Plastic glooves", "Plastic utensils", "Plastic straw", "Styrofoam piece"],
+    "glass": ["Glass bottle", "Broken glass", "Glass cup", "Glass jar"],
+    "metal": ["Aluminium foil", "Metal bottle cap", "Food Can", "Drink can", "Metal lid", "Pop tab", "Scrap metal"],
+    "paper": ["Toilet tube", "Corrugated carton", "Magazine paper", "Normal paper", "Paper bag", "Paper straw"],
+    "organic": ["Food waste"],
+    "hazardous": ["Battery"]
+  }
+}

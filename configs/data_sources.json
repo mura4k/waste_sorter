@@ -1,0 +1,18 @@
+{
+  "trashnet": {
+    "revision": "6fa2b878c6c1b4304b91109070ce0edf9279bb31",
+    "url": "https://raw.githubusercontent.com/garythung/trashnet/6fa2b878c6c1b4304b91109070ce0edf9279bb31/data/dataset-resized.zip",
+    "filename": "trashnet-resized.zip",
+    "sha256": "0bf472790f8b20e5c950d5b5012a9d38af0d3392efd65f8ce171334fc16b07c2",
+    "license_url": "https://github.com/garythung/trashnet/blob/6fa2b878c6c1b4304b91109070ce0edf9279bb31/LICENSE",
+    "role": "image_audit_and_provisional_internal_split"
+  },
+  "taco": {
+    "revision": "70479ad9adc3da971a8ae75ac97eb1026910eec7",
+    "url": "https://raw.githubusercontent.com/pedropro/TACO/70479ad9adc3da971a8ae75ac97eb1026910eec7/data/annotations.json",
+    "filename": "taco-annotations.json",
+    "sha256": "812c2e3f0d336b437f276597715de2abb08bb8a641599c45f593d233ec66457b",
+    "license_url": "https://github.com/pedropro/TACO",
+    "role": "annotation_audit_only_not_training"
+  }
+}

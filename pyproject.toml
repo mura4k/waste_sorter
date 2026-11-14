@@ -8,6 +8,13 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["ruff>=0.6", "pre-commit>=3.7", "pytest>=8.0"]
+eda = [
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<3",
+    "Pillow>=10.4,<13",
+    "matplotlib>=3.9,<4",
+    "scikit-learn>=1.5,<2",
+]
 
 [build-system]
 requires = ["setuptools>=68"]

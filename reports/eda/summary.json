@@ -1,0 +1,121 @@
+{
+  "seed": 42,
+  "mapping_version": "hw2-v1",
+  "sources": {
+    "trashnet": {
+      "revision": "6fa2b878c6c1b4304b91109070ce0edf9279bb31",
+      "url": "https://raw.githubusercontent.com/garythung/trashnet/6fa2b878c6c1b4304b91109070ce0edf9279bb31/data/dataset-resized.zip",
+      "filename": "trashnet-resized.zip",
+      "sha256": "0bf472790f8b20e5c950d5b5012a9d38af0d3392efd65f8ce171334fc16b07c2",
+      "license_url": "https://github.com/garythung/trashnet/blob/6fa2b878c6c1b4304b91109070ce0edf9279bb31/LICENSE",
+      "role": "image_audit_and_provisional_internal_split"
+    },
+    "taco": {
+      "revision": "70479ad9adc3da971a8ae75ac97eb1026910eec7",
+      "url": "https://raw.githubusercontent.com/pedropro/TACO/70479ad9adc3da971a8ae75ac97eb1026910eec7/data/annotations.json",
+      "filename": "taco-annotations.json",
+      "sha256": "812c2e3f0d336b437f276597715de2abb08bb8a641599c45f593d233ec66457b",
+      "license_url": "https://github.com/pedropro/TACO",
+      "role": "annotation_audit_only_not_training"
+    }
+  },
+  "environment": {
+    "python": "3.11.18",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "pillow": "12.3.0",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1"
+  },
+  "trashnet": {
+    "images": 2527,
+    "source_counts": {
+      "cardboard": 403,
+      "glass": 501,
+      "metal": 410,
+      "paper": 594,
+      "plastic": 482,
+      "trash": 137
+    },
+    "target_counts": {
+      "paper": 997,
+      "glass": 501,
+      "plastic": 482,
+      "metal": 410
+    },
+    "unresolved_labels": 137,
+    "decode_errors": 0,
+    "raw_bytes": 43282402,
+    "dimensions": {
+      "512x384": 2527
+    },
+    "modes": {
+      "RGB": 2527
+    },
+    "exif_present": 0,
+    "low_resolution": 0,
+    "low_contrast_flags": 34,
+    "low_sharpness_flags": 65,
+    "brightness_median": 168.4075927734375,
+    "sharpness_median": 511.70338866372487,
+    "exact_file_duplicates": 3,
+    "pixel_duplicate_groups": 3,
+    "pixel_duplicate_excess": 3,
+    "candidate_pairs": 547,
+    "candidate_cross_source_label_pairs": 273,
+    "candidate_groups": 2354,
+    "candidate_multi_image_groups": 42,
+    "split_counts": {
+      "train": 1568,
+      "test": 343,
+      "validation": 338,
+      "excluded": 278
+    },
+    "excluded_reasons": {
+      "": 2249,
+      "candidate_group_label_conflict": 145,
+      "unresolved_source_label": 133
+    },
+    "split_by_target": {
+      "excluded": {
+        "glass": 31,
+        "metal": 6,
+        "paper": 63,
+        "plastic": 41
+      },
+      "test": {
+        "glass": 72,
+        "metal": 63,
+        "paper": 143,
+        "plastic": 65
+      },
+      "train": {
+        "glass": 327,
+        "metal": 280,
+        "paper": 651,
+        "plastic": 310
+      },
+      "validation": {
+        "glass": 71,
+        "metal": 61,
+        "paper": 140,
+        "plastic": 66
+      }
+    },
+    "group_leakage_count": 0
+  },
+  "taco": {
+    "images": 1500,
+    "annotations": 4784,
+    "categories": 60,
+    "missing_license_images": 715,
+    "unresolved_license_images": 1500,
+    "invalid_references": 0,
+    "invalid_bboxes": 7,
+    "duplicate_annotation_ids": 2,
+    "multi_object_scenes": 890,
+    "zero_annotation_scenes": 0,
+    "small_bbox_fraction": 0.6720317725752508,
+    "max_objects_per_scene": 90
+  }
+}
